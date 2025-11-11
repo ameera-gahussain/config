@@ -4,7 +4,7 @@ set -e
 yay -S --noconfirm docker-desktop
 
 if ! gpg --list-keys | grep -q '^pub'; then
-    gpg --batch --passphrase '' --quick-gen-key "Adrian Low <adrianlow1998@gmail.com>" default default never
+    gpg --batch --passphrase '' --quick-gen-key "Ameera <ameera@rooftop.my>" default default never
 fi
 GPG_ID=$(gpg --list-keys --with-colons | awk -F: '/^pub/ { print $5; exit }')
 if [[ -z "$GPG_ID" ]]; then
